@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TAR2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body{
+            text-align:center;
+        }
+        .atraction{
+            margin-bottom:50px;
+        }
+        .atraction>p{
+            font-size:20px;
+            height:60px;
+            background-color:#8ebcd6;
+        }
+        #leftdiv > h3{
+            color:#0094ff;
+        }
+        .card-body > h4{
+            font-size:16px;
+            height:40px;
+        }
+        @media only screen and (min-width: 768px){
+            .card{
+                width:30%;
+                margin:2% auto;
+            }
+        }
+        @media only screen and (min-width: 992px) {
+            .card {
+                width: 22%;
+            }
+        }
+        .card-text > img {
+            margin-bottom: 15px;
+            transition: 1s;
+        }
+        div.card:hover{
+            transform: scale(1.1,1.1);
+        box-shadow: 0px 0px 10px gray;
+        transition: 1s;
+        }
+        .card-text > img:hover {
+            transform: scale(1.3,1.3);
+            transition: 1s;
+            
+        }  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <img class="img-thumbnail" src="images/banner.jpg" />
+            <h3>אטרקציות בבודפשט</h3>
+        </div>
+        <div class="row">
+            <div id="leftdiv" class="col-sm-6 col-md-4">
+                <h3>מסעדות מומלצות</h3>
+                <div class="row">
+                    <div class="col-6 atraction">
+                        <p>
+                            אי טייבל
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resturant">מידע נוסף</button>
+                    </div>
+                    <div class="col-6 atraction">
+                        <p>
+                            קונדיטוריית רוסוורם
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resturant">מידע נוסף</button>
+                    </div>
+                    <div class="col-6 atraction">
+                        <p>
+                            משוגע
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resturant">מידע נוסף</button>
+                    </div>
+                    <div class="col-6 atraction">
+                        <p>
+                            סטארבקס
+                        </p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#resturant">מידע נוסף</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">בית הכנסת הגדול</h4>
+                                <div class="card-text">
+                                    <img class="img-thumbnail" src="images/1.jpg">
+                                    <a href="https://www.google.com/search?q=%D7%91%D7%99%D7%AA+%D7%94%D7%9B%D7%A0%D7%A1%D7%AA+%D7%94%D7%92%D7%93%D7%95%D7%9C+%D7%91%D7%95%D7%93%D7%A4%D7%A9%D7%98&oq=%D7%91%D7%99%D7%AA+%D7%94%D7%9B%D7%A0%D7%A1%D7%AA+%D7%94%D7%92%D7%93%D7%95%D7%9C+%D7%91%D7%95%D7%93%D7%A4%D7%A9%D7%98&aqs=edge..69i57j0i22i30j0i10i22i30l2j0i10i15i22i30l4.7453j0j1&sourceid=chrome&ie=UTF-8" class="btn btn-info" target="_blank">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">שוק האיכרים</h4>
+                                <div class="card-text">
+                                    <img class="img-thumbnail" src="images/2.jpg">
+                                    <a href="https://www.google.com/search?q=%D7%A9%D7%95%D7%A7+%D7%94%D7%90%D7%99%D7%9B%D7%A8%D7%99%D7%9D+%D7%91%D7%95%D7%93%D7%A4%D7%A9%D7%98&sxsrf=APwXEdd9Nu7babi1SUVedCBQQBf0kSWbvA%3A1680362091773&ei=a0ooZJHaLp6G9u8P8sOumAc&oq=aaue+vthfrho+pusp&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMgkIABANEIAEEBMyCQgAEA0QgAQQEzoKCAAQRxDWBBCwAzoKCAAQigUQsAMQQzoICAAQigUQkQI6EwguEIoFELEDEIMBEMcBENEDEEM6BQgAEIAEOgsILhCABBCxAxCDAToRCC4QgAQQsQMQgwEQxwEQ0QM6EQguEIoFELEDEIMBEMcBENEDOgsILhDUAhCxAxCABDoLCAAQgAQQsQMQgwE6CgguEIoFEEMQ6gQ6BwgAEIoFEEM6EAguEIoFEMcBENEDENQCEEM6CAguEIAEENQCOgcILhCABBAKOgcIABCABBAKOgUILhCABDoJCAAQgAQQChABOgkIABCABBAKECo6DQguEIAEEMcBEK8BEAo6BwgjEOoCECc6DQguEMcBEK8BEOoCECc6DQgAEI8BEOoCELQCGAE6DQguEI8BEOoCELQCGAE6DQgAEIoFELEDEIMBEEM6CAguEIAEELEDOg4ILhCABBCxAxDHARDRAzoICAAQgAQQsQM6CAguENQCEIAEOgsILhCABBDHARCvAToNCC4QgAQQxwEQ0QMQCjoICC4QgAQQ6gQ6CgguEIAEENQCEAo6BQghEKABOgoILhANEIAEEOoEOgcIABANEIAEOgcIIRCgARAKSgQIQRgAUMMYWLo5YIxJaAhwAXgAgAHpAYgBuBiSAQYwLjE4LjKYAQCgAQGwARDIAQnAAQHaAQYIARABGAo&sclient=gws-wiz-serp" class="btn btn-info" target="_blank">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">השוק המקורה</h4>
+                                <div class="card-text">
+                                    <img class="img-thumbnail" src="images/3.jpg">
+                                    <a href="https://www.google.com/search?q=%D7%94%D7%A9%D7%95%D7%A7+%D7%94%D7%9E%D7%A7%D7%95%D7%A8%D7%94+%D7%91%D7%95%D7%93%D7%A4%D7%A9%D7%98&sxsrf=APwXEdcsomjmrTjXPyKZlkYHjCpEb7_LgQ%3A1680362569972&ei=SUwoZOCCO9fvkgWJnI6wCg&gs_ssp=eJzj4tTP1TdIKzEsMjVgtFI1qDAxNzFMSTZJSzVKMkw2SjO3MqhINLBINjY1TDVPSko0Sk1O9lK6PuX6yutTry9XADLmXV8OZK64PkXh-kQgY_L1JUC5GQAKtiYo&oq=%D7%94%D7%A9%D7%95%D7%A7+%D7%94%D7%9E%D7%A7%D7%95%D7%A8&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMhEILhCABBDHARCvARDLARDqBDIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywEyDgguEIAEEMcBEK8BEMsBMggIABCABBDLATIICAAQgAQQywEyBggAEBYQHjIGCAAQFhAeOgoIABBHENYEELADOg0ILhDHARCvARAnEOoEOgQIIxAnOgUIABCABDoLCAAQgAQQsQMQgwE6CwguEIAEELEDEIMBOgsILhCABBDHARDRAzoGCCMQJxATOg4ILhCABBDHARCvARDUAjoLCC4QgAQQxwEQrwE6DgguEIAEEMcBEK8BEOoEOg4ILhCvARDHARCABBDLAUoECEEYAFDgCVigFmCYVGgEcAF4AIABtwGIAfoKkgEEMC4xMJgBAKABAcgBCMABAQ&sclient=gws-wiz-serp" class="btn btn-info" target="_blank">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">הגלגל הענק</h4>
+                                <div class="card-text">
+                                    <a href="https://proj.ruppin.ac.il/cgroup54/test1/tar1/Tar1.html" target="_blank">
+                                        <img class="img-thumbnail" src="images/4.jpg">
+                                    </a>
+                                    <a href="https://www.google.com/search?sxsrf=APwXEdc2hmnqa4LJkYS1Ie3v6go5WGFQuA:1680362761104&q=%D7%94%D7%92%D7%9C%D7%92%D7%9C+%D7%94%D7%A2%D7%A0%D7%A7+%D7%91%D7%91%D7%95%D7%93%D7%A4%D7%A9%D7%98&spell=1&sa=X&ved=2ahUKEwjwrOCL_4j-AhUmsKQKHYytAuoQBSgAegQIBxAB&biw=1124&bih=582&dpr=1.56" class="btn btn-info" target="_blank">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">בזיליקת אישטוון</h4>
+                                <div class="card-text">
+                                    <img class="img-thumbnail" src="images/5.jpg">
+                                    <a href="https://www.google.com/search?q=%D7%91%D7%96%D7%99%D7%9C%D7%99%D7%A7%D7%AA+%D7%90%D7%99%D7%A9%D7%98%D7%95%D7%95%D7%9F+%D7%94%D7%A7%D7%93%D7%95%D7%A9+%D7%91%D7%91%D7%95%D7%93%D7%A4%D7%A9%D7%98&biw=1124&bih=582&sxsrf=APwXEdez9ePRAebtmgdjwIWQfAkBY4aXrQ%3A1680362763425&ei=C00oZI7KGYaWkwW8w7igAg&gs_ssp=eJzj4tTP1TcwMTAuLjFgtFI1qDAxNzFMNjRNNU5MNE5OSTO3MqhISTExSktOTE5MNU9LSk5O8jK_PvH6tOszr88B4uXXVylcnwBkrLw-4_pUIJyvcH0KUHQykLlSAahwIpAx-foSkDwA72c1RA&oq=%D7%91%D7%96%D7%99%D7%9C%D7%99%D7%A7%D7%AA+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMhEILhCABBDHARCvARDLARDqBDIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLATIOCC4QgAQQxwEQrwEQywEyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywEyCAgAEIAEEMsBMggIABCABBDLAToKCAAQRxDWBBCwAzoECCMQJzoGCCMQJxATOgsILhCABBCxAxCDAToICAAQgAQQsQM6CwguEIAEEMcBENEDOgUIABCABDoRCC4QgAQQxwEQ0QMQ1AIQ6gQ6CwguEIAEEMcBEK8BOgsILhCvARDHARCABDoLCC4QgAQQywEQ6gQ6CAguEIAEEMsBSgQIQRgAUNsLWIAVYNQcaANwAXgAgAGjAYgB0wiSAQMwLjiYAQCgAQHIAQjAAQE&sclient=gws-wiz-serp#cobssid=s" class="btn btn-info" target="_blank">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">בניין הפרלמנט</h4>
+                                <div class="card-text">
+                                    <img class="img-thumbnail" src="images/6.jpg">
+                                    <a href="https://www.google.com/search?q=%D7%91%D7%A0%D7%99%D7%99%D7%9F+%D7%94%D7%A4%D7%A8%D7%9C%D7%9E%D7%A0%D7%98+%D7%91%D7%91%D7%95%D7%93%D7%A4%D7%A9%D7%98&biw=1124&bih=582&sxsrf=APwXEddLNAs85b9Lh_mDTBtf6iGmchLEUQ%3A1680362958481&ei=zk0oZP2IHY_WkwX9y7-QDQ&gs_ssp=eJzj4tTP1TewyCkrLjFgtFI1qDAxNzFMSTY0MDFLMUk0Nk6xMqgwNjEyNDJKskhLs0gzSDNL9dK4PvH6guszgXC-wvUp15dcX3F9zvV5QKEZCkCZidenXp8MFFx5fQYA5Ssp3A&oq=%D7%91%D7%A0%D7%99%D7%99%D7%9F+%D7%94%D7%A4%D7%A8%D7%9C%D7%9E%D7%A0%D7%98+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgBMgYIIxAnEBMyDgguEIAEEMcBEK8BEMsBMg4ILhCABBDHARCvARDLATIICAAQgAQQywEyDgguEIAEEMcBEK8BEMsBMggIABCABBDLATIOCC4QgAQQxwEQrwEQywEyCAgAEIAEEMsBMggIABCABBDLATIICAAQgAQQywFKBAhBGABQAFgAYLoQaABwAXgAgAGZAYgBmQGSAQMwLjGYAQCgAQHAAQE&sclient=gws-wiz-serp" class="btn btn-info" target="_blank">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card d-md-none d-lg-block">
+                            <div class="card-body">
+                                <h4 class="card-title">אנדרטת הנעליים</h4>
+                                <div class="card-text">
+                                    <img class="img-thumbnail" src="images/7.jpg">
+                                    <a href="https://www.google.com/search?q=%D7%90%D7%A0%D7%93%D7%A8%D7%98%D7%AA+%D7%94%D7%A0%D7%A2%D7%9C%D7%99%D7%99%D7%9D&biw=1124&bih=582&sxsrf=APwXEdcnOV7PKvRE-st_G0z1lQjqoMIFqg%3A1680362965052&ei=1U0oZP_uAo76kwXgxLQo&gs_ssp=eJzj4tLP1TcwMi-rSMsyYLRSNagwMTcxTEk2NDM3MUoxM0lJszKoSDOzSDW0NEtOSk1OMktMMfOSvj7h-oLrk6-vuD7j-iqF61OAnEXX51yfCYRzASXSIds&oq=%D7%90%D7%A0%D7%93%D7%A8%D7%98%D7%AA+%D7%94%D7%A0%D7%A2%D7%9C&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMhEILhCvARDHARCABBDLARDqBDIICAAQgAQQywEyCAgAEIAEEMsBMgUIABCABDIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeOgoIABBHENYEELADOgQIIxAnOggIABCABBCxAzoLCC4QgAQQxwEQ0QM6CwguEIAEELEDEIMBOgQILhADOgYIIxAnEBM6BQguEIAEOggILhCABBDUAjoOCC4QgAQQxwEQ0QMQ6gQ6CAguEIAEEMsBOg4ILhCABBDHARCvARDLAToOCC4QrwEQxwEQgAQQywE6EgguEA0QgAQQxwEQrwEQExDqBDoJCAAQDRCABBATOggIABAeEA0QEzoHCAAQDRCABDoGCAAQHhANSgQIQRgAUPMIWKAmYJIyaAVwAXgAgAHeAYgBwxKSAQYwLjExLjKYAQCgAQHIAQjAAQE&sclient=gws-wiz-serp" class="btn btn-info" target="_blank">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card d-md-none d-lg-block">
+                            <div class="card-body">
+                                <h4 class="card-title">רחוב הקניות - ואצי אוצה</h4>
+                                <div class="card-text">
+                                    <img class="img-thumbnail" src="images/8.jpg">
+                                    <a href="https://www.google.com/search?q=%D7%A8%D7%97%D7%95%D7%91+%D7%94%D7%A7%D7%A0%D7%99%D7%95%D7%AA+%D7%95%D7%90%D7%A6%D7%99+%D7%90%D7%95%D7%A6%D7%94+%D7%91%D7%95%D7%93%D7%A4%D7%A9%D7%98&biw=1124&bih=582&sxsrf=APwXEdeND7VbSi6gtt1RM2V6oHOww9YDEQ%3A1680363068652&ei=PE4oZLCsJ5jfkwXEro6oDQ&oq=+%D7%A8%D7%97%D7%95%D7%91+%D7%94%D7%A7%D7%A0%D7%99%D7%95%D7%AA+%D7%95%D7%90%D7%A6%D7%99+%D7%90%D7%95%D7%A6%D7%94+%D7%91%D7%95%D7%93%D7%A4&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgcIIRCgARAKOgoIABBHENYEELADOgQIIxAnOgcIIxCwAhAnOgUIABCiBDoFCCEQoAE6CAghEBYQHhAdOgQIIRAVSgQIQRgAUOgFWLwwYKE3aARwAXgAgAHHAYgB3AuSAQMwLjmYAQCgAQHIAQjAAQE&sclient=gws-wiz-serp" class="btn btn-info" target="_blank">קרא עוד</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div class="modal fade" id="resturant">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Meshuga</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <img src="images/meshuga.jpg" />
+                    <p>
+                        מסעדת משוגע, מסעדה ישראלית עם מוזיקה ישראלית, מסעדה צעירה, נעימה, נקייה אבל כיפית ביותר והכי חשוב האוכל…..אמאל'ה כמה שזה טעים. המסעדה נמצאת בסמטת הגוזדו  ומביאה לנו תחושה רגועה, ישראלית, של אוכל עם הידיים כמו שאנחנו אוהבים, ובמקביל נותן לנו טעימה מהעולם הטורקי והערבי של השף חצי ישראלי, חצי טורקי מור מאיה האחד והיחיד עם מנות מנצחות כמו: סביח, סלט איסטנבול, ניוקי ערמונים, אקמק בליק וממתקים מזרח תיכוניים ערבים לחיך כמו: כנאפה גבינת עיזים ועוד….
+                    </p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
